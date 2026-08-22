@@ -13,7 +13,7 @@
 - [x] Build an authenticated Next.js dashboard with clear module navigation, upcoming events, recent activity, and key household totals.
 - [x] Implement a monochromatic industrial brutalist interface with overlapping gray rectangular blocks, bold geometric composition, and high-contrast typography.
 - [ ] Add automated tests for Supabase authorization boundaries, validation, core data operations, invitation permissions, and dashboard aggregation.
-- [ ] Verify responsive desktop and mobile layouts, prepare README and Vercel setup instructions, commit the completed implementation, and provide the GitHub handoff.
+- [x] Verify responsive desktop and mobile layouts, prepare README and Vercel setup instructions, commit the completed implementation, and provide the GitHub handoff.
 - [x] Configure `@supabase/ssr` browser client, server client, and middleware session refresh path following the Next.js App Router pattern.
 - [ ] Include the requested `.env.example` variable names exactly and enforce safe local/deployment configuration without committing secret values.
 - [x] Run `lint`, `typecheck`, `test`, and `build` scripts successfully before committing and pushing all foundation code to the connected GitHub repository `main` branch.
@@ -33,7 +33,7 @@
 - [x] Add denied Supabase write assertions for family, finance, and reminder mutations, and strengthen household-boundary permission fixtures.
 - [ ] Run live anon-key Supabase RLS integration tests with two authenticated household users after Vercel environment variables are configured; verify cross-household reads and writes are denied.
 - [x] Verify README documents Vercel setup, required public environment variables, and GitHub handoff details before delivering the synchronized repository status.
-- [ ] Send the explicit GitHub handoff with repository URL, `main` branch, synchronized commit SHA, and Vercel environment setup notes.
+- [x] Send the explicit GitHub handoff with repository URL, `main` branch, synchronized commit SHA, and Vercel environment setup notes.
 - [x] Confirm the GitHub remote targets `seinpoe/family-erp`, push the latest reviewed commit to `main`, and verify local `HEAD` matches `origin/main`.
 - [x] Exercise configured dashboard signed-out redirect and summary-error behavior directly at the route or middleware boundary.
 - [x] Protect every dashboard-linked module route in middleware and test the actual signed-out redirect response with a preserved return path.
