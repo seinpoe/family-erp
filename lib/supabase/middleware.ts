@@ -3,10 +3,10 @@ import { NextResponse, type NextRequest } from "next/server";
 import { getSupabasePublicConfig } from "@/lib/supabase/config";
 import type { Database } from "@/lib/supabase/types";
 
-const protectedPaths = ["/dashboard"];
+const protectedPaths = ["/dashboard", "/family", "/schedule", "/finance", "/assets", "/documents", "/reminders", "/invite"];
 
 export function requiresAuthentication(pathname: string) {
-  return protectedPaths.some((path) => pathname.startsWith(path));
+  return protectedPaths.some((path) => pathname === path || pathname.startsWith(`${path}/`));
 }
 
 export function loginRedirectPath(pathname: string) {

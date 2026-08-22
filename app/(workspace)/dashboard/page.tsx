@@ -1,3 +1,4 @@
+import React from "react";
 import { DashboardWorkspace } from "@/components/dashboard-workspace";
 import { loadDashboardSummary, setupDashboardSummary } from "@/lib/dashboard/summary";
 import { isSupabaseConfigured } from "@/lib/supabase/config";

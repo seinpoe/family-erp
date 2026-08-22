@@ -7,6 +7,7 @@ type HouseholdRow = { id: string; name: string; base_currency: string };
 type ScheduleRow = { id: string; title: string; starts_at: string };
 type ActivityRow = { id: number; action: string; entity_type: string; occurred_at: string };
 type FinanceRow = { amount: number | string; kind: "income" | "expense" | "transfer" | "liability" };
+type ReminderRow = { id: string; title: string; kind: "bill" | "renewal" | "appointment" | "birthday" | "custom"; due_at: string; next_trigger_at: string | null };
 
 export type HouseholdOption = Pick<HouseholdRow, "id" | "name">;
 
@@ -17,6 +18,7 @@ export type DashboardSummary = {
   activeHouseholdId?: string;
   availableHouseholds: HouseholdOption[];
   upcomingEvents: ScheduleRow[];
+  dueReminders: ReminderRow[];
   recentActivity: ActivityRow[];
   documentCount: number;
   reminderCount: number;
@@ -28,6 +30,7 @@ export const setupDashboardSummary: DashboardSummary = {
   status: "setup",
   availableHouseholds: [],
   upcomingEvents: [],
+  dueReminders: [],
   recentActivity: [],
   documentCount: 0,
   reminderCount: 0,
@@ -65,15 +68,17 @@ export async function loadDashboardSummary(supabase: SupabaseClient<Database>, u
   if (!activeHousehold) return { ...setupDashboardSummary, status: "error", message: "The selected household is no longer available." };
 
   const now = new Date().toISOString();
-  const [eventsResult, activityResult, documentsResult, remindersResult, financeResult] = await Promise.all([
+  const lookAhead = new Date(Date.now() + 7 * 86_400_000).toISOString();
+  const [eventsResult, activityResult, documentsResult, remindersResult, dueRemindersResult, financeResult] = await Promise.all([
     supabase.from("schedule_items").select("id,title,starts_at").eq("household_id", activeHouseholdId).is("deleted_at", null).gte("starts_at", now).order("starts_at", { ascending: true }).limit(5),
     supabase.from("activity_logs").select("id,action,entity_type,occurred_at").eq("household_id", activeHouseholdId).order("occurred_at", { ascending: false }).limit(5),
     supabase.from("documents").select("id", { count: "exact", head: true }).eq("household_id", activeHouseholdId).is("deleted_at", null),
     supabase.from("reminders").select("id", { count: "exact", head: true }).eq("household_id", activeHouseholdId).is("deleted_at", null).eq("enabled", true),
+    supabase.from("reminders").select("id,title,kind,due_at,next_trigger_at").eq("household_id", activeHouseholdId).is("deleted_at", null).eq("enabled", true).lte("due_at", lookAhead).order("due_at", { ascending: true }).limit(5),
     supabase.from("financial_records").select("amount,kind").eq("household_id", activeHouseholdId).is("deleted_at", null),
   ]);
 
-  if (eventsResult.error || documentsResult.error || remindersResult.error || financeResult.error) {
+  if (eventsResult.error || documentsResult.error || remindersResult.error || dueRemindersResult.error || financeResult.error) {
     return { ...setupDashboardSummary, status: "error", availableHouseholds: households, message: "The workspace summary could not be loaded." };
   }
 
@@ -84,6 +89,7 @@ export async function loadDashboardSummary(supabase: SupabaseClient<Database>, u
     activeHouseholdId,
     availableHouseholds: households.map(({ id, name }) => ({ id, name })),
     upcomingEvents: (eventsResult.data ?? []) as ScheduleRow[],
+    dueReminders: (dueRemindersResult.data ?? []) as ReminderRow[],
     recentActivity: activityResult.error ? [] : ((activityResult.data ?? []) as ActivityRow[]),
     documentCount: documentsResult.count ?? 0,
     reminderCount: remindersResult.count ?? 0,

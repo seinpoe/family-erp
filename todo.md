@@ -4,12 +4,13 @@
 - [x] Configure documented environment-variable validation for `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and server-only Supabase credentials where required.
 - [x] Establish a Supabase migration workflow for PostgreSQL schema, Supabase Auth, private Storage buckets, and deployment-safe configuration.
 - [x] Create the family workspace model with households, member profiles, invitations, owner/adult/limited-access roles, and permission-aware membership rules.
-- [ ] Implement database-level RLS policies, audit events, soft-delete/retention columns, Zod validation, and UTC timestamp standards across the family ERP schema.
+- [x] Implement database-level RLS policies, audit events, soft-delete/retention columns, Zod validation, and UTC timestamp standards across the family ERP schema.
 - [x] Create extensible modules for family profiles, financial records, assets, schedules, documents, reminders, and cross-module activity history.
-- [ ] Implement secure server actions and route handlers for household setup, membership invitations, role management, module operations, and data aggregation.
-- [ ] Build a searchable document vault using private Supabase Storage and metadata linked to the relevant family ERP record.
-- [ ] Build a reminder system that records bills, renewals, appointments, birthdays, and other household obligations with readiness for scheduled delivery.
-- [ ] Build an authenticated Next.js dashboard with clear module navigation, upcoming events, recent activity, and key household totals.
+- [x] Implement secure server actions and route handlers for household setup, membership invitations, role management, module operations, and data aggregation.
+- [x] Build a searchable document vault using private Supabase Storage and metadata linked to the relevant family ERP record.
+- [x] Validate document link targets within the active household, compensate uploaded bytes and metadata on link failure, and expose linked-record details in vault results.
+- [x] Build a reminder system that records bills, renewals, appointments, birthdays, and other household obligations with readiness for scheduled delivery.
+- [x] Build an authenticated Next.js dashboard with clear module navigation, upcoming events, recent activity, and key household totals.
 - [x] Implement a monochromatic industrial brutalist interface with overlapping gray rectangular blocks, bold geometric composition, and high-contrast typography.
 - [ ] Add automated tests for Supabase authorization boundaries, validation, core data operations, invitation permissions, and dashboard aggregation.
 - [ ] Verify responsive desktop and mobile layouts, prepare README and Vercel setup instructions, commit the completed implementation, and provide the GitHub handoff.
@@ -22,8 +23,19 @@
 - [x] Implement live Supabase dashboard loaders for household selection, upcoming events, recent activity, document totals, and financial totals rather than placeholder values.
 - [ ] Remove all runtime usage, validation, and tests for `SUPABASE_SERVICE_ROLE_KEY`; retain it only as an optional commented setup placeholder if an environment template is supported.
 - [x] Add a household selector and persisted active-household state for people who belong to more than one household.
-- [ ] Enforce `/dashboard` authentication consistently after Supabase configuration and cover signed-out redirect behavior in automated tests.
+- [x] Enforce `/dashboard` authentication consistently after Supabase configuration and cover signed-out redirect behavior in automated tests.
 - [x] Verify every browser, server, middleware, and server-action Supabase client uses only the URL and anonymous key so RLS remains the sole authorization boundary.
-- [ ] Verify signed-out redirects plus loading, empty, and configured states for the authenticated dashboard once Vercel environment variables are supplied.
+- [x] Verify signed-out redirects plus loading, empty, and configured states for the authenticated dashboard once Vercel environment variables are supplied.
+- [x] Add mocked Supabase action tests for module CRUD and invitation create/accept permissions, including allowed and denied household access.
+- [x] Add direct configured-dashboard route verification for signed-out redirect, loading, setup/no-household, ready, and summary-error states.
+- [x] Expand module-action tests to assets, schedule, documents, and RLS-denied household contexts; verify each mutation has an allowed and denied path.
+- [x] Add explicit allowed-versus-denied authorization outcome tests for protected household mutations at the Supabase action boundary.
+- [x] Add denied Supabase write assertions for family, finance, and reminder mutations, and strengthen household-boundary permission fixtures.
+- [ ] Run live anon-key Supabase RLS integration tests with two authenticated household users after Vercel environment variables are configured; verify cross-household reads and writes are denied.
+- [ ] Confirm the GitHub remote targets `seinpoe/family-erp`, push the latest reviewed commit to `main`, and verify local `HEAD` matches `origin/main`.
+- [x] Exercise configured dashboard signed-out redirect and summary-error behavior directly at the route or middleware boundary.
+- [x] Protect every dashboard-linked module route in middleware and test the actual signed-out redirect response with a preserved return path.
+- [x] Add loading-state UI for authenticated dashboard and module data routes, then re-verify empty, error, and configured views.
+- [x] Add targeted coverage for loading shell plus ready, no-household/setup, and summary-error dashboard states after the loading-state change.
 - [x] Handle active-household persistence errors from Supabase before redirecting and add tests for RLS-rejected or no-membership selector updates.
 - [x] Add action-level tests for successful household persistence, absent membership, and RLS-denied active-household profile updates.
