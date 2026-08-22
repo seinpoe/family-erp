@@ -76,11 +76,11 @@ The **system administrator** provisions, verifies, and disables Supabase Auth id
 | Create or set an initial Auth password | System administrator, in Supabase administration | Creates only an identity; it does not grant household access. |
 | Assign household access | Household owner through an invitation, or the approved Supabase administration acceptance workflow | Grants only the approved `owner`, `adult`, or `limited` household role. |
 | Sign in | Authenticated family account | Use password sign-in at `/login`, or request an email sign-in link. |
-| Change a password | Signed-in family account | Use `/account/security`, enter the current password, and choose a new password of at least 12 characters. |
+| Change a password | Signed-in family account | Use `/account/security`, enter the current password, and choose a new password of at least 12 characters. The application verifies and submits the current password to Supabase Auth. |
 
 The application never stores, displays, logs, or returns a password. A password change updates only the account’s Supabase Auth credential; it does not alter household membership, role, or RLS permissions.
 
-> **Production prerequisite:** Before enabling password sign-in for family accounts, enable Supabase Auth’s [leaked-password protection](https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection) in the project authentication settings. The latest security review reported this setting as disabled; it is an external Supabase project configuration rather than an application-runtime setting.
+> **Production prerequisite:** Before enabling password sign-in for family accounts, configure password policy in Supabase Auth settings: set a minimum password length of at least 12 characters, enable [leaked-password protection](https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection), and enable current-password enforcement for password changes. The latest security review reported leaked-password protection as disabled; these are external Supabase project settings rather than application-runtime settings.
 
 ## Reminder delivery
 

@@ -51,6 +51,6 @@ describe("changePassword", () => {
     vi.mocked(createClient).mockResolvedValue(supabase as never);
     await expect(changePassword(initialState, passwordForm())).resolves.toEqual({ status: "success", message: "Password updated. Keep it private and use it for your next sign-in." });
     expect(supabase.auth.signInWithPassword).toHaveBeenCalledWith({ email: "person@example.com", password: "current-password" });
-    expect(supabase.auth.updateUser).toHaveBeenCalledWith({ password: "a-secure-new-password" });
+    expect(supabase.auth.updateUser).toHaveBeenCalledWith({ password: "a-secure-new-password", current_password: "current-password" });
   });
 });

@@ -28,7 +28,7 @@ export async function changePassword(_previousState: PasswordChangeState, formDa
   const verification = await supabase.auth.signInWithPassword({ email: user.email, password: validation.data.currentPassword });
   if (verification.error) return { status: "error", message: "Your current password is incorrect." };
 
-  const { error } = await supabase.auth.updateUser({ password: validation.data.newPassword });
+  const { error } = await supabase.auth.updateUser({ password: validation.data.newPassword, current_password: validation.data.currentPassword });
   if (error) return { status: "error", message: "Your password could not be updated. Please try again." };
   return { status: "success", message: "Password updated. Keep it private and use it for your next sign-in." };
 }

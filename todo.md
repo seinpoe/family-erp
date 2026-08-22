@@ -58,3 +58,4 @@
 - [x] Add secure Supabase password sign-in for administrator-provisioned accounts and an authenticated self-service password-change flow for signed-in users.
 - [x] Test password authentication validation and password-change guardrails without exposing passwords, sessions, or privileged credentials.
 - [ ] Enable Supabase Auth leaked-password protection in project authentication settings before enabling production password sign-in; the security advisor currently reports this external setting as disabled.
+- [ ] Enable Supabase Auth current-password enforcement for password changes and align it with the application’s current-password confirmation flow before production password use.
