@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ModuleWorkspace, type ModuleKey } from "@/components/module-workspace";
 import { Button } from "@/components/ui/button";
+import { resolveWithin } from "@/lib/async/recovery";
 import { getActiveHouseholdContext } from "@/lib/households/context";
 
 const modules: ModuleKey[] = ["family", "finance", "assets", "schedule", "documents", "reminders"];
@@ -21,11 +22,13 @@ export default async function ModulePage({ params, searchParams }: { params: Pro
   const { module } = await params;
   const { q } = await searchParams;
   if (!modules.includes(module as ModuleKey)) notFound();
-  const context = await getActiveHouseholdContext();
+  const context = await resolveWithin(() => getActiveHouseholdContext(), null, 7000);
   if (!context) return <ModuleSetupFallback module={module as ModuleKey} />;
   const searchQuery = q?.trim().slice(0, 120) ?? "";
-  const result = await moduleRecords(module as ModuleKey, context.household.id, context, searchQuery);
-  const memberResult = module === "family" ? await context.supabase.from("household_members").select("user_id,role").eq("household_id", context.household.id).is("deleted_at", null).limit(50) : { data: [] };
+  const [result, memberResult] = await Promise.all([
+    moduleRecords(module as ModuleKey, context.household.id, context, searchQuery),
+    module === "family" ? context.supabase.from("household_members").select("user_id,role").eq("household_id", context.household.id).is("deleted_at", null).limit(50) : Promise.resolve({ data: [] }),
+  ]);
   const records = (result.data ?? []) as Record<string, unknown>[];
   const linkedRecords = module === "documents" && records.length > 0
     ? await context.supabase.from("record_links").select("source_id,target_type,target_id").eq("household_id", context.household.id).eq("source_type", "document").is("deleted_at", null).in("source_id", records.map((record) => String(record.id))).limit(100)
@@ -37,7 +40,7 @@ export default async function ModulePage({ params, searchParams }: { params: Pro
 
 function ModuleSetupFallback({ module }: { module: ModuleKey }) {
   const meta = moduleMeta[module];
-  return <main className="container py-7 sm:py-10"><section className="border border-line bg-surface p-5 shadow-tactile sm:p-7"><p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-brand">Workspace setup required</p><h1 className="mt-3 max-w-2xl text-4xl font-black uppercase leading-[0.88] tracking-[-0.07em] sm:text-6xl">Choose a household before opening {meta.title}.</h1><p className="mt-4 max-w-xl text-sm leading-6 text-muted">This module never displays records without an active household. Return to the dashboard to configure Supabase access or select one of your approved household workspaces.</p><Link className="mt-6 inline-flex" href="/dashboard"><Button size="touch">Open dashboard</Button></Link></section></main>;
+  return <main className="container pb-32 pt-5 sm:py-10"><section className="border border-line bg-surface p-5 shadow-tactile sm:p-7"><p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-brand">Workspace setup required</p><h1 className="mt-3 max-w-2xl text-3xl font-black uppercase leading-[0.92] tracking-[-0.07em] sm:text-5xl">Select a household to open {meta.title}.</h1><p className="mt-3 max-w-xl text-sm leading-6 text-muted">For privacy, this workspace stays empty until an approved household is active. Choose one from your dashboard, then return here.</p><div className="mt-5 border-l-4 border-brand bg-soft p-3 text-sm leading-6 text-ink">No household record is shown while setup is incomplete.</div><Link className="mt-5 inline-flex w-full sm:w-auto" href="/dashboard"><Button size="touch" className="w-full">Open dashboard</Button></Link></section></main>;
 }
 
 const moduleMeta: Record<ModuleKey, { title: string }> = {

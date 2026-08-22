@@ -74,9 +74,18 @@
 - [ ] Validate the redesigned interface for keyboard accessibility, focus visibility, touch ergonomics, contrast, responsive layouts, and production build readiness.
 - [x] Add and verify a high-visibility keyboard focus indicator for links, buttons, inputs, and selects across light and dark themes.
 - [ ] Verify dark-mode rendering for a real authenticated active-household module workspace with actual data using the in-app theme preference, then document the review.
-- [ ] Redesign finance and shared module workspace flows with banking-style mobile summaries, prioritized actions, touch-first forms and lists, and accessible interaction states.
-- [ ] Extend banking-style mobile summaries, prioritized actions, and touch-first interaction patterns to the remaining non-finance module workspaces.
+- [x] Redesign finance and shared module workspace flows with banking-style mobile summaries, prioritized actions, touch-first forms and lists, and accessible interaction states.
+- [x] Extend banking-style mobile summaries, prioritized actions, and touch-first interaction patterns to the remaining non-finance module workspaces.
 - [ ] Verify redesigned authenticated module workspaces with a real active household and data on mobile, including keyboard focus, contrast, and touch ergonomics.
 - [ ] Capture and document real active-household module screenshots in light and dark themes after the redesign, then rerun all deployment-quality gates.
 - [x] Configure framework-aware `next/core-web-vitals` and `next/typescript` lint rules, validate zero-warning standalone linting, and document the remaining Next.js 15.5 build-time plugin-detection heuristic warning for recheck after a framework upgrade.
 - [x] Remove tracked `.next-dev` build artifacts and ignore future development output so checkpoints remain small and reliable.
+- [ ] Diagnose the production mobile loading state shown in the user screenshot, including Supabase configuration, auth/session behavior, client bundle cost, and loading fallback duration.
+- [x] Simplify the mobile app shell by reducing header control density, deferring non-essential client work, and replacing indefinite skeletons with concise timeout-aware recovery states.
+- [x] Define and document a chunked Lifetime ERP delivery sequence: secure shell, dashboard/finance ledger, household operations, document/reminder workflows, and live verification.
+- [x] Optimize and verify the first secure-shell chunk on mobile before progressing to subsequent ERP chunks.
+- [x] Replace the current dense mobile header and permanent control cluster with a lean, task-oriented banking app shell that preserves one-hand reachability.
+- [x] Remove avoidable loading-state friction by using fast route skeletons, bounded recovery messaging, and deferred non-essential client behaviors.
+- [x] Rebuild dashboard, finance, and household workflows around clear primary tasks, ledger-style lists, grouped actions, and mobile-native spacing.
+- [ ] Complete the banking-standard mobile redesign autonomously in independently tested chunks without requiring additional user input.
+- [ ] Re-verify the authenticated mobile secure-shell end-to-end with an active household session when a live family-side session is available, and record the exact route and state reviewed.
