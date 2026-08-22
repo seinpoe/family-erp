@@ -57,6 +57,12 @@
 - [x] Add verification coverage documenting that the administrator-approved Supabase invitation-approval exception checks invitation validity, target identity, role, system-admin exclusion, active household assignment, and audit recording.
 - [x] Add secure Supabase password sign-in for administrator-provisioned accounts and an authenticated self-service password-change flow for signed-in users.
 - [x] Test password authentication validation and password-change guardrails without exposing passwords, sessions, or privileged credentials.
-- [ ] Enable Supabase Auth leaked-password protection in project authentication settings before enabling production password sign-in; the security advisor currently reports this external setting as disabled.
+- [x] Document that Supabase Auth leaked-password protection is unavailable on the current plan, retain alternative password safeguards, and reassess this setting after any Supabase plan change.
 - [ ] Enable Supabase Auth current-password enforcement for password changes and align it with the application’s current-password confirmation flow before production password use.
 - [x] Identify the root cause of the Next.js root-page preview runtime error (`a[d] is not a function`), apply a durable fix if required, and perform repeated post-restart homepage regression verification. Development and production Next.js artifacts are now isolated; the dedicated configuration test and repeated post-build homepage requests pass.
+- [x] Apply the requested blue, white, Athens Gray, and dark neutral theme tokens across the mobile-first Family ERP interface.
+- [ ] Verify light and dark theme contrast, desktop and mobile rendering, and quality checks after the palette update.
+- [ ] Add a user-controlled light/dark theme preference and directly review dark-mode rendering on public, authenticated, and module workspace routes.
+- [x] Fix the blank protected-module fallback shown when a session exists without an active configured household, then re-verify its module fallback surface in dark mode.
+- [x] Capture dark-mode mobile screenshots for public, authenticated, and security routes using the explicit theme preference.
+- [ ] Verify a real active-household module workspace in dark mode after Vercel public Supabase configuration and a family-side authenticated session are available.

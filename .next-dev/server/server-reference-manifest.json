@@ -31,10 +31,20 @@
         "app/(workspace)/account/security/page": {
           "moduleId": "(rsc)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Factions.ts%22%2C%5B%7B%22id%22%3A%22000b939ebcce698d7d992aed12fdf5c4ce212e9583%22%2C%22exportedName%22%3A%22signOut%22%2C%22filename%22%3A%22app%2F(workspace)%2Factions.ts%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
+        },
+        "app/(workspace)/dashboard/page": {
+          "moduleId": "(rsc)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Factions.ts%22%2C%5B%7B%22id%22%3A%22000b939ebcce698d7d992aed12fdf5c4ce212e9583%22%2C%22exportedName%22%3A%22signOut%22%2C%22filename%22%3A%22app%2F(workspace)%2Factions.ts%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/(workspace)/[module]/page": {
+          "moduleId": "(rsc)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Factions.ts%22%2C%5B%7B%22id%22%3A%22000b939ebcce698d7d992aed12fdf5c4ce212e9583%22%2C%22exportedName%22%3A%22signOut%22%2C%22filename%22%3A%22app%2F(workspace)%2Factions.ts%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
         }
       },
       "layer": {
-        "app/(workspace)/account/security/page": "rsc"
+        "app/(workspace)/account/security/page": "rsc",
+        "app/(workspace)/dashboard/page": "rsc",
+        "app/(workspace)/[module]/page": "rsc"
       },
       "filename": "app/(workspace)/actions.ts",
       "exportedName": "signOut"
@@ -51,6 +61,162 @@
       },
       "filename": "app/(workspace)/account/security/actions.ts",
       "exportedName": "changePassword"
+    },
+    "604a3b846f3ebf5e121c892d9f0940baadaee6e084": {
+      "workers": {
+        "app/(workspace)/dashboard/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fdashboard%2Factions.ts%22%2C%5B%7B%22id%22%3A%22604a3b846f3ebf5e121c892d9f0940baadaee6e084%22%2C%22exportedName%22%3A%22createHouseholdWorkspace%22%2C%22filename%22%3A%22app%2F(workspace)%2Fdashboard%2Factions.ts%22%7D%2C%7B%22id%22%3A%22607ccf28998c9ed1a8fde904c4d67b280421b633a6%22%2C%22exportedName%22%3A%22chooseActiveHousehold%22%2C%22filename%22%3A%22app%2F(workspace)%2Fdashboard%2Factions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/dashboard/page": "action-browser"
+      },
+      "filename": "app/(workspace)/dashboard/actions.ts",
+      "exportedName": "createHouseholdWorkspace"
+    },
+    "607ccf28998c9ed1a8fde904c4d67b280421b633a6": {
+      "workers": {
+        "app/(workspace)/dashboard/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fdashboard%2Factions.ts%22%2C%5B%7B%22id%22%3A%22604a3b846f3ebf5e121c892d9f0940baadaee6e084%22%2C%22exportedName%22%3A%22createHouseholdWorkspace%22%2C%22filename%22%3A%22app%2F(workspace)%2Fdashboard%2Factions.ts%22%7D%2C%7B%22id%22%3A%22607ccf28998c9ed1a8fde904c4d67b280421b633a6%22%2C%22exportedName%22%3A%22chooseActiveHousehold%22%2C%22filename%22%3A%22app%2F(workspace)%2Fdashboard%2Factions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/dashboard/page": "action-browser"
+      },
+      "filename": "app/(workspace)/dashboard/actions.ts",
+      "exportedName": "chooseActiveHousehold"
+    },
+    "60014b7c51e0ef9b89d36f7b488f39503ed916ed89": {
+      "workers": {
+        "app/(workspace)/[module]/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fmodule-actions.ts%22%2C%5B%7B%22id%22%3A%2260014b7c51e0ef9b89d36f7b488f39503ed916ed89%22%2C%22exportedName%22%3A%22updateMemberRole%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%226023ba73bd43b0f772f52062eb1a576ee06a25ead6%22%2C%22exportedName%22%3A%22acceptHouseholdInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260727d20a47a04c8d86392c506cebf91e3768941e3%22%2C%22exportedName%22%3A%22createFamilyPerson%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%22608c5cef933bc78ddec4c656b192e47114fcaad846%22%2C%22exportedName%22%3A%22createAsset%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260ae1f0008f52edffa70fb0572fc6e909181866320%22%2C%22exportedName%22%3A%22createReminder%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260b1cda83179210a988d65d05e4220bd17fa865633%22%2C%22exportedName%22%3A%22createFinancialRecord%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260c2c25f3a8ce65879f62cb3b01968c52657c588e7%22%2C%22exportedName%22%3A%22createScheduleItem%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260f64f64eb39725cb128ada14c8307ef1e9567b958%22%2C%22exportedName%22%3A%22createInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260fe43eec402acbfcb574bded85cd404a1e4f45977%22%2C%22exportedName%22%3A%22uploadDocument%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%227fb64061c4ec1d6347ea8570cf602073b07b49a90e%22%2C%22exportedName%22%3A%22initialModuleActionState%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/[module]/page": "action-browser"
+      },
+      "filename": "app/(workspace)/module-actions.ts",
+      "exportedName": "updateMemberRole"
+    },
+    "6023ba73bd43b0f772f52062eb1a576ee06a25ead6": {
+      "workers": {
+        "app/(workspace)/[module]/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fmodule-actions.ts%22%2C%5B%7B%22id%22%3A%2260014b7c51e0ef9b89d36f7b488f39503ed916ed89%22%2C%22exportedName%22%3A%22updateMemberRole%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%226023ba73bd43b0f772f52062eb1a576ee06a25ead6%22%2C%22exportedName%22%3A%22acceptHouseholdInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260727d20a47a04c8d86392c506cebf91e3768941e3%22%2C%22exportedName%22%3A%22createFamilyPerson%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%22608c5cef933bc78ddec4c656b192e47114fcaad846%22%2C%22exportedName%22%3A%22createAsset%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260ae1f0008f52edffa70fb0572fc6e909181866320%22%2C%22exportedName%22%3A%22createReminder%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260b1cda83179210a988d65d05e4220bd17fa865633%22%2C%22exportedName%22%3A%22createFinancialRecord%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260c2c25f3a8ce65879f62cb3b01968c52657c588e7%22%2C%22exportedName%22%3A%22createScheduleItem%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260f64f64eb39725cb128ada14c8307ef1e9567b958%22%2C%22exportedName%22%3A%22createInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260fe43eec402acbfcb574bded85cd404a1e4f45977%22%2C%22exportedName%22%3A%22uploadDocument%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%227fb64061c4ec1d6347ea8570cf602073b07b49a90e%22%2C%22exportedName%22%3A%22initialModuleActionState%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/[module]/page": "action-browser"
+      },
+      "filename": "app/(workspace)/module-actions.ts",
+      "exportedName": "acceptHouseholdInvitation"
+    },
+    "60727d20a47a04c8d86392c506cebf91e3768941e3": {
+      "workers": {
+        "app/(workspace)/[module]/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fmodule-actions.ts%22%2C%5B%7B%22id%22%3A%2260014b7c51e0ef9b89d36f7b488f39503ed916ed89%22%2C%22exportedName%22%3A%22updateMemberRole%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%226023ba73bd43b0f772f52062eb1a576ee06a25ead6%22%2C%22exportedName%22%3A%22acceptHouseholdInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260727d20a47a04c8d86392c506cebf91e3768941e3%22%2C%22exportedName%22%3A%22createFamilyPerson%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%22608c5cef933bc78ddec4c656b192e47114fcaad846%22%2C%22exportedName%22%3A%22createAsset%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260ae1f0008f52edffa70fb0572fc6e909181866320%22%2C%22exportedName%22%3A%22createReminder%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260b1cda83179210a988d65d05e4220bd17fa865633%22%2C%22exportedName%22%3A%22createFinancialRecord%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260c2c25f3a8ce65879f62cb3b01968c52657c588e7%22%2C%22exportedName%22%3A%22createScheduleItem%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260f64f64eb39725cb128ada14c8307ef1e9567b958%22%2C%22exportedName%22%3A%22createInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260fe43eec402acbfcb574bded85cd404a1e4f45977%22%2C%22exportedName%22%3A%22uploadDocument%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%227fb64061c4ec1d6347ea8570cf602073b07b49a90e%22%2C%22exportedName%22%3A%22initialModuleActionState%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/[module]/page": "action-browser"
+      },
+      "filename": "app/(workspace)/module-actions.ts",
+      "exportedName": "createFamilyPerson"
+    },
+    "608c5cef933bc78ddec4c656b192e47114fcaad846": {
+      "workers": {
+        "app/(workspace)/[module]/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fmodule-actions.ts%22%2C%5B%7B%22id%22%3A%2260014b7c51e0ef9b89d36f7b488f39503ed916ed89%22%2C%22exportedName%22%3A%22updateMemberRole%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%226023ba73bd43b0f772f52062eb1a576ee06a25ead6%22%2C%22exportedName%22%3A%22acceptHouseholdInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260727d20a47a04c8d86392c506cebf91e3768941e3%22%2C%22exportedName%22%3A%22createFamilyPerson%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%22608c5cef933bc78ddec4c656b192e47114fcaad846%22%2C%22exportedName%22%3A%22createAsset%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260ae1f0008f52edffa70fb0572fc6e909181866320%22%2C%22exportedName%22%3A%22createReminder%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260b1cda83179210a988d65d05e4220bd17fa865633%22%2C%22exportedName%22%3A%22createFinancialRecord%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260c2c25f3a8ce65879f62cb3b01968c52657c588e7%22%2C%22exportedName%22%3A%22createScheduleItem%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260f64f64eb39725cb128ada14c8307ef1e9567b958%22%2C%22exportedName%22%3A%22createInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260fe43eec402acbfcb574bded85cd404a1e4f45977%22%2C%22exportedName%22%3A%22uploadDocument%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%227fb64061c4ec1d6347ea8570cf602073b07b49a90e%22%2C%22exportedName%22%3A%22initialModuleActionState%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/[module]/page": "action-browser"
+      },
+      "filename": "app/(workspace)/module-actions.ts",
+      "exportedName": "createAsset"
+    },
+    "60ae1f0008f52edffa70fb0572fc6e909181866320": {
+      "workers": {
+        "app/(workspace)/[module]/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fmodule-actions.ts%22%2C%5B%7B%22id%22%3A%2260014b7c51e0ef9b89d36f7b488f39503ed916ed89%22%2C%22exportedName%22%3A%22updateMemberRole%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%226023ba73bd43b0f772f52062eb1a576ee06a25ead6%22%2C%22exportedName%22%3A%22acceptHouseholdInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260727d20a47a04c8d86392c506cebf91e3768941e3%22%2C%22exportedName%22%3A%22createFamilyPerson%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%22608c5cef933bc78ddec4c656b192e47114fcaad846%22%2C%22exportedName%22%3A%22createAsset%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260ae1f0008f52edffa70fb0572fc6e909181866320%22%2C%22exportedName%22%3A%22createReminder%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260b1cda83179210a988d65d05e4220bd17fa865633%22%2C%22exportedName%22%3A%22createFinancialRecord%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260c2c25f3a8ce65879f62cb3b01968c52657c588e7%22%2C%22exportedName%22%3A%22createScheduleItem%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260f64f64eb39725cb128ada14c8307ef1e9567b958%22%2C%22exportedName%22%3A%22createInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260fe43eec402acbfcb574bded85cd404a1e4f45977%22%2C%22exportedName%22%3A%22uploadDocument%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%227fb64061c4ec1d6347ea8570cf602073b07b49a90e%22%2C%22exportedName%22%3A%22initialModuleActionState%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/[module]/page": "action-browser"
+      },
+      "filename": "app/(workspace)/module-actions.ts",
+      "exportedName": "createReminder"
+    },
+    "60b1cda83179210a988d65d05e4220bd17fa865633": {
+      "workers": {
+        "app/(workspace)/[module]/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fmodule-actions.ts%22%2C%5B%7B%22id%22%3A%2260014b7c51e0ef9b89d36f7b488f39503ed916ed89%22%2C%22exportedName%22%3A%22updateMemberRole%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%226023ba73bd43b0f772f52062eb1a576ee06a25ead6%22%2C%22exportedName%22%3A%22acceptHouseholdInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260727d20a47a04c8d86392c506cebf91e3768941e3%22%2C%22exportedName%22%3A%22createFamilyPerson%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%22608c5cef933bc78ddec4c656b192e47114fcaad846%22%2C%22exportedName%22%3A%22createAsset%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260ae1f0008f52edffa70fb0572fc6e909181866320%22%2C%22exportedName%22%3A%22createReminder%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260b1cda83179210a988d65d05e4220bd17fa865633%22%2C%22exportedName%22%3A%22createFinancialRecord%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260c2c25f3a8ce65879f62cb3b01968c52657c588e7%22%2C%22exportedName%22%3A%22createScheduleItem%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260f64f64eb39725cb128ada14c8307ef1e9567b958%22%2C%22exportedName%22%3A%22createInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260fe43eec402acbfcb574bded85cd404a1e4f45977%22%2C%22exportedName%22%3A%22uploadDocument%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%227fb64061c4ec1d6347ea8570cf602073b07b49a90e%22%2C%22exportedName%22%3A%22initialModuleActionState%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/[module]/page": "action-browser"
+      },
+      "filename": "app/(workspace)/module-actions.ts",
+      "exportedName": "createFinancialRecord"
+    },
+    "60c2c25f3a8ce65879f62cb3b01968c52657c588e7": {
+      "workers": {
+        "app/(workspace)/[module]/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fmodule-actions.ts%22%2C%5B%7B%22id%22%3A%2260014b7c51e0ef9b89d36f7b488f39503ed916ed89%22%2C%22exportedName%22%3A%22updateMemberRole%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%226023ba73bd43b0f772f52062eb1a576ee06a25ead6%22%2C%22exportedName%22%3A%22acceptHouseholdInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260727d20a47a04c8d86392c506cebf91e3768941e3%22%2C%22exportedName%22%3A%22createFamilyPerson%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%22608c5cef933bc78ddec4c656b192e47114fcaad846%22%2C%22exportedName%22%3A%22createAsset%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260ae1f0008f52edffa70fb0572fc6e909181866320%22%2C%22exportedName%22%3A%22createReminder%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260b1cda83179210a988d65d05e4220bd17fa865633%22%2C%22exportedName%22%3A%22createFinancialRecord%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260c2c25f3a8ce65879f62cb3b01968c52657c588e7%22%2C%22exportedName%22%3A%22createScheduleItem%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260f64f64eb39725cb128ada14c8307ef1e9567b958%22%2C%22exportedName%22%3A%22createInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260fe43eec402acbfcb574bded85cd404a1e4f45977%22%2C%22exportedName%22%3A%22uploadDocument%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%227fb64061c4ec1d6347ea8570cf602073b07b49a90e%22%2C%22exportedName%22%3A%22initialModuleActionState%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/[module]/page": "action-browser"
+      },
+      "filename": "app/(workspace)/module-actions.ts",
+      "exportedName": "createScheduleItem"
+    },
+    "60f64f64eb39725cb128ada14c8307ef1e9567b958": {
+      "workers": {
+        "app/(workspace)/[module]/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fmodule-actions.ts%22%2C%5B%7B%22id%22%3A%2260014b7c51e0ef9b89d36f7b488f39503ed916ed89%22%2C%22exportedName%22%3A%22updateMemberRole%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%226023ba73bd43b0f772f52062eb1a576ee06a25ead6%22%2C%22exportedName%22%3A%22acceptHouseholdInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260727d20a47a04c8d86392c506cebf91e3768941e3%22%2C%22exportedName%22%3A%22createFamilyPerson%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%22608c5cef933bc78ddec4c656b192e47114fcaad846%22%2C%22exportedName%22%3A%22createAsset%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260ae1f0008f52edffa70fb0572fc6e909181866320%22%2C%22exportedName%22%3A%22createReminder%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260b1cda83179210a988d65d05e4220bd17fa865633%22%2C%22exportedName%22%3A%22createFinancialRecord%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260c2c25f3a8ce65879f62cb3b01968c52657c588e7%22%2C%22exportedName%22%3A%22createScheduleItem%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260f64f64eb39725cb128ada14c8307ef1e9567b958%22%2C%22exportedName%22%3A%22createInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260fe43eec402acbfcb574bded85cd404a1e4f45977%22%2C%22exportedName%22%3A%22uploadDocument%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%227fb64061c4ec1d6347ea8570cf602073b07b49a90e%22%2C%22exportedName%22%3A%22initialModuleActionState%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/[module]/page": "action-browser"
+      },
+      "filename": "app/(workspace)/module-actions.ts",
+      "exportedName": "createInvitation"
+    },
+    "60fe43eec402acbfcb574bded85cd404a1e4f45977": {
+      "workers": {
+        "app/(workspace)/[module]/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fmodule-actions.ts%22%2C%5B%7B%22id%22%3A%2260014b7c51e0ef9b89d36f7b488f39503ed916ed89%22%2C%22exportedName%22%3A%22updateMemberRole%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%226023ba73bd43b0f772f52062eb1a576ee06a25ead6%22%2C%22exportedName%22%3A%22acceptHouseholdInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260727d20a47a04c8d86392c506cebf91e3768941e3%22%2C%22exportedName%22%3A%22createFamilyPerson%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%22608c5cef933bc78ddec4c656b192e47114fcaad846%22%2C%22exportedName%22%3A%22createAsset%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260ae1f0008f52edffa70fb0572fc6e909181866320%22%2C%22exportedName%22%3A%22createReminder%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260b1cda83179210a988d65d05e4220bd17fa865633%22%2C%22exportedName%22%3A%22createFinancialRecord%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260c2c25f3a8ce65879f62cb3b01968c52657c588e7%22%2C%22exportedName%22%3A%22createScheduleItem%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260f64f64eb39725cb128ada14c8307ef1e9567b958%22%2C%22exportedName%22%3A%22createInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260fe43eec402acbfcb574bded85cd404a1e4f45977%22%2C%22exportedName%22%3A%22uploadDocument%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%227fb64061c4ec1d6347ea8570cf602073b07b49a90e%22%2C%22exportedName%22%3A%22initialModuleActionState%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/[module]/page": "action-browser"
+      },
+      "filename": "app/(workspace)/module-actions.ts",
+      "exportedName": "uploadDocument"
+    },
+    "7fb64061c4ec1d6347ea8570cf602073b07b49a90e": {
+      "workers": {
+        "app/(workspace)/[module]/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Fmodule-actions.ts%22%2C%5B%7B%22id%22%3A%2260014b7c51e0ef9b89d36f7b488f39503ed916ed89%22%2C%22exportedName%22%3A%22updateMemberRole%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%226023ba73bd43b0f772f52062eb1a576ee06a25ead6%22%2C%22exportedName%22%3A%22acceptHouseholdInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260727d20a47a04c8d86392c506cebf91e3768941e3%22%2C%22exportedName%22%3A%22createFamilyPerson%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%22608c5cef933bc78ddec4c656b192e47114fcaad846%22%2C%22exportedName%22%3A%22createAsset%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260ae1f0008f52edffa70fb0572fc6e909181866320%22%2C%22exportedName%22%3A%22createReminder%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260b1cda83179210a988d65d05e4220bd17fa865633%22%2C%22exportedName%22%3A%22createFinancialRecord%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260c2c25f3a8ce65879f62cb3b01968c52657c588e7%22%2C%22exportedName%22%3A%22createScheduleItem%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260f64f64eb39725cb128ada14c8307ef1e9567b958%22%2C%22exportedName%22%3A%22createInvitation%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%2260fe43eec402acbfcb574bded85cd404a1e4f45977%22%2C%22exportedName%22%3A%22uploadDocument%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%2C%7B%22id%22%3A%227fb64061c4ec1d6347ea8570cf602073b07b49a90e%22%2C%22exportedName%22%3A%22initialModuleActionState%22%2C%22filename%22%3A%22app%2F(workspace)%2Fmodule-actions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/[module]/page": "action-browser"
+      },
+      "filename": "app/(workspace)/module-actions.ts",
+      "exportedName": "initialModuleActionState"
     }
   },
   "edge": {},

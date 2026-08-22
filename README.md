@@ -80,7 +80,7 @@ The **system administrator** provisions, verifies, and disables Supabase Auth id
 
 The application never stores, displays, logs, or returns a password. A password change updates only the account’s Supabase Auth credential; it does not alter household membership, role, or RLS permissions.
 
-> **Production prerequisite:** Before enabling password sign-in for family accounts, configure password policy in Supabase Auth settings: set a minimum password length of at least 12 characters, enable [leaked-password protection](https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection), and enable current-password enforcement for password changes. The latest security review reported leaked-password protection as disabled; these are external Supabase project settings rather than application-runtime settings.
+> **Password-policy status:** The current Supabase plan does not provide [leaked-password protection](https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection), so this provider-side control remains unavailable. Until the plan changes, require passwords of at least 12 characters, enable Supabase current-password enforcement for password changes, retain the application’s current-password confirmation, and instruct family accounts to use unique password-manager generated passwords. Reassess leaked-password protection after any Supabase plan change.
 
 ## Reminder delivery
 

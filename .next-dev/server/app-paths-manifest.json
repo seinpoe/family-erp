@@ -1,7 +1,9 @@
 {
-  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/icon.svg/route": "app/icon.svg/route.js",
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/page": "app/page.js",
   "/login/page": "app/login/page.js",
-  "/(workspace)/account/security/page": "app/(workspace)/account/security/page.js"
+  "/(workspace)/account/security/page": "app/(workspace)/account/security/page.js",
+  "/(workspace)/[module]/page": "app/(workspace)/[module]/page.js",
+  "/(workspace)/dashboard/page": "app/(workspace)/dashboard/page.js"
 }

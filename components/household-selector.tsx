@@ -18,7 +18,7 @@ export function HouseholdSelector({ households, activeHouseholdId }: { household
 
   if (households.length < 2) return null;
   return (
-    <section className="mb-5 border border-ink bg-surface p-3 shadow-tactile-sm" aria-label="Active household">
+    <section className="mb-5 border border-line bg-surface p-3 shadow-tactile-sm" aria-label="Active household">
       <p className="font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-muted">Active household</p>
       <form action={formAction} className="mt-2 flex flex-wrap gap-2">
         {households.map((household) => <Button key={household.id} type="submit" name="householdId" value={household.id} variant={household.id === activeHouseholdId ? "solid" : "outline"} size="compact" disabled={pending}>{household.name}</Button>)}

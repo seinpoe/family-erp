@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "@/app/globals.css";
 import { PwaRegister } from "@/components/pwa-register";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: { default: "Hearthline — Family ERP", template: "%s — Hearthline" },
@@ -10,8 +11,8 @@ export const metadata: Metadata = {
   appleWebApp: { capable: true, statusBarStyle: "default", title: "Hearthline" },
   formatDetection: { telephone: false },
 };
-export const viewport: Viewport = { width: "device-width", initialScale: 1, maximumScale: 1, themeColor: "#2e2e2e" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, maximumScale: 1, themeColor: "#1877F2" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><PwaRegister />{children}</body></html>;
+  return <html lang="en"><body><PwaRegister />{children}<ThemeToggle /></body></html>;
 }
