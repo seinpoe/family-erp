@@ -43,3 +43,13 @@
 - [x] Add targeted coverage for loading shell plus ready, no-household/setup, and summary-error dashboard states after the loading-state change.
 - [x] Handle active-household persistence errors from Supabase before redirecting and add tests for RLS-rejected or no-membership selector updates.
 - [x] Add action-level tests for successful household persistence, absent membership, and RLS-denied active-household profile updates.
+- [x] Verify `htooauntwan@tuta.io` Supabase Auth identity and designate it as a system administrator outside every household membership flow.
+- [ ] Collect the remaining two account email addresses and intended roles, then create least-privilege household invitations with auditable expiration and acceptance status.
+- [ ] Verify all three member accounts have the intended RLS-protected module access and document the final role matrix.
+- [x] Design and implement a system-administrator identity path for `htooauntwan@tuta.io` that is not a household member and cannot create or view household income, expenses, assets, schedules, documents, or reminders.
+- [x] Revise account setup guidance so only designated family accounts receive household member roles and financial-data permissions.
+- [x] Document the administrator-led provisioning workflow: the system administrator may create or manage Supabase Auth identities, but must never receive a household membership, active household, or household-data permission.
+- [x] Verify `primary.drive.htoo@gmail.com` Supabase Auth identity and configure it as the primary household owner/account without granting system-administrator privileges.
+- [ ] Configure two family accounts as adult household members: primary account as owner and second account as adult through the invitation workflow.
+- [ ] Create any missing adult identity through Supabase Auth only after checking for an existing confirmed account, then use household invitation acceptance rather than direct member injection.
+- [ ] Create the `Htoo Family` household with `primary.drive.htoo@gmail.com` as owner and configure `poeeiphyu.official@gmail.com` as an adult household member through the authorized invitation acceptance flow. The workspace and a 14-day adult invitation are active; acceptance remains pending.
