@@ -64,6 +64,8 @@ The local accessibility and responsiveness review covered visible `:focus-visibl
 
 The active `family-erp` project is healthy in `ap-southeast-1`. The latest security advisor still reports one warning: leaked-password protection is disabled. This matches the documented current-plan limitation and is not remediated by weakening the RLS-only architecture. The latest performance advisor reports only **INFO-level unused-index notices** across household-scoped tables. Because the household has low current traffic and these indexes support established, privacy-scoped query paths, no destructive index removal was performed. The project should reassess actual index use after meaningful production activity rather than optimizing away safeguards based on an empty or low-use workload. [1] [2]
 
+A read-only aggregate of the last 24 hours of Supabase unified logs showed expected database, authentication, edge, connection-pool, realtime, and storage sources. It did not expose a specific server-side fault that explains the reported browser loading state. This is not sufficient to diagnose a Vercel rendering issue because the production URL and an authenticated family-side browser session were unavailable; the local bounded-recovery implementation remains the safe mitigation until deployed request traces can be correlated.
+
 [1]: https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection
 [2]: https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index
 
