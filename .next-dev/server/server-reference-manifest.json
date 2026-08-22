@@ -1,0 +1,58 @@
+{
+  "node": {
+    "608618d800f5cb03cbf50e5f79559c3c49264f9275": {
+      "workers": {
+        "app/login/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2Flogin%2Factions.ts%22%2C%5B%7B%22id%22%3A%22608618d800f5cb03cbf50e5f79559c3c49264f9275%22%2C%22exportedName%22%3A%22signInWithPassword%22%2C%22filename%22%3A%22app%2Flogin%2Factions.ts%22%7D%2C%7B%22id%22%3A%2260fcc9243b8b60c9c16fde9d9b090f5a555052c4a2%22%2C%22exportedName%22%3A%22requestMagicLink%22%2C%22filename%22%3A%22app%2Flogin%2Factions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/login/page": "action-browser"
+      },
+      "filename": "app/login/actions.ts",
+      "exportedName": "signInWithPassword"
+    },
+    "60fcc9243b8b60c9c16fde9d9b090f5a555052c4a2": {
+      "workers": {
+        "app/login/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2Flogin%2Factions.ts%22%2C%5B%7B%22id%22%3A%22608618d800f5cb03cbf50e5f79559c3c49264f9275%22%2C%22exportedName%22%3A%22signInWithPassword%22%2C%22filename%22%3A%22app%2Flogin%2Factions.ts%22%7D%2C%7B%22id%22%3A%2260fcc9243b8b60c9c16fde9d9b090f5a555052c4a2%22%2C%22exportedName%22%3A%22requestMagicLink%22%2C%22filename%22%3A%22app%2Flogin%2Factions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/login/page": "action-browser"
+      },
+      "filename": "app/login/actions.ts",
+      "exportedName": "requestMagicLink"
+    },
+    "000b939ebcce698d7d992aed12fdf5c4ce212e9583": {
+      "workers": {
+        "app/(workspace)/account/security/page": {
+          "moduleId": "(rsc)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Factions.ts%22%2C%5B%7B%22id%22%3A%22000b939ebcce698d7d992aed12fdf5c4ce212e9583%22%2C%22exportedName%22%3A%22signOut%22%2C%22filename%22%3A%22app%2F(workspace)%2Factions.ts%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/account/security/page": "rsc"
+      },
+      "filename": "app/(workspace)/actions.ts",
+      "exportedName": "signOut"
+    },
+    "60a99b6fbb9554d3002378497085a2abc19c168db8": {
+      "workers": {
+        "app/(workspace)/account/security/page": {
+          "moduleId": "(action-browser)/./node_modules/.pnpm/next@15.5.23_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fubuntu%2Ffamily-erp%2Fapp%2F(workspace)%2Faccount%2Fsecurity%2Factions.ts%22%2C%5B%7B%22id%22%3A%2260a99b6fbb9554d3002378497085a2abc19c168db8%22%2C%22exportedName%22%3A%22changePassword%22%2C%22filename%22%3A%22app%2F(workspace)%2Faccount%2Fsecurity%2Factions.ts%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(workspace)/account/security/page": "action-browser"
+      },
+      "filename": "app/(workspace)/account/security/actions.ts",
+      "exportedName": "changePassword"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "fVinQZI/K4LqHD05FsSniTG+arnJJj56gXkhlQQ0Gys="
+}

@@ -59,3 +59,4 @@
 - [x] Test password authentication validation and password-change guardrails without exposing passwords, sessions, or privileged credentials.
 - [ ] Enable Supabase Auth leaked-password protection in project authentication settings before enabling production password sign-in; the security advisor currently reports this external setting as disabled.
 - [ ] Enable Supabase Auth current-password enforcement for password changes and align it with the application’s current-password confirmation flow before production password use.
+- [x] Identify the root cause of the Next.js root-page preview runtime error (`a[d] is not a function`), apply a durable fix if required, and perform repeated post-restart homepage regression verification. Development and production Next.js artifacts are now isolated; the dedicated configuration test and repeated post-build homepage requests pass.
