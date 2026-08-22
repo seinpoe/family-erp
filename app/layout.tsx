@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "@/app/globals.css";
 import { PwaRegister } from "@/components/pwa-register";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
   title: { default: "Hearthline — Family ERP", template: "%s — Hearthline" },
@@ -12,7 +11,8 @@ export const metadata: Metadata = {
   formatDetection: { telephone: false },
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, maximumScale: 1, themeColor: "#1877F2" };
+const themeBootstrap = "try{var p=new URLSearchParams(location.search).get('theme');var s=localStorage.getItem('hearthline-theme');var t=p==='light'||p==='dark'?p:s==='light'||s==='dark'?s:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;localStorage.setItem('hearthline-theme',t)}catch(e){}";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><PwaRegister />{children}<ThemeToggle className="fixed bottom-4 right-4 z-50 hidden sm:flex" /></body></html>;
+  return <html lang="en" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: themeBootstrap }} /></head><body><PwaRegister />{children}</body></html>;
 }

@@ -2,24 +2,16 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
+import { applyTheme, resolveTheme, type Theme } from "@/lib/theme";
 import { cn } from "@/lib/utils";
-
-type Theme = "light" | "dark";
-
-const storageKey = "hearthline-theme";
-
-function applyTheme(theme: Theme) {
-  document.documentElement.dataset.theme = theme;
-  localStorage.setItem(storageKey, theme);
-}
 
 export function ThemeToggle({ className }: { className?: string }) {
   const [theme, setTheme] = useState<Theme | null>(null);
 
   useEffect(() => {
-    const saved = localStorage.getItem(storageKey);
+    const saved = localStorage.getItem("hearthline-theme");
     const requested = new URLSearchParams(window.location.search).get("theme");
-    const initialTheme: Theme = requested === "light" || requested === "dark" ? requested : saved === "light" || saved === "dark" ? saved : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    const initialTheme = resolveTheme(requested, saved, window.matchMedia("(prefers-color-scheme: dark)").matches);
     applyTheme(initialTheme);
     setTheme(initialTheme);
   }, []);
