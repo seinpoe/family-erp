@@ -70,7 +70,7 @@
 - [ ] Run live anon-key tests using the two Htoo Family identities to confirm owner/adult data access, system-admin household denial, and cross-household isolation.
 - [x] Produce an actionable infrastructure standards audit covering RLS authorization, authentication, secure configuration, data protection, error handling, observability, PWA resilience, and deployment readiness.
 - [x] Implement the highest-priority, non-secret infrastructure hardening improvements identified by the standards audit and add regression coverage.
-- [ ] Redesign the mobile experience around banking-grade information hierarchy, touch targets, clear balances and activity states, predictable navigation, and accessible financial interactions.
+- [x] Redesign the mobile experience around banking-grade information hierarchy, touch targets, clear balances and activity states, predictable navigation, and accessible financial interactions.
 - [ ] Validate the redesigned interface for keyboard accessibility, focus visibility, touch ergonomics, contrast, responsive layouts, and production build readiness.
 - [x] Add and verify a high-visibility keyboard focus indicator for links, buttons, inputs, and selects across light and dark themes.
 - [ ] Verify dark-mode rendering for a real authenticated active-household module workspace with actual data using the in-app theme preference, then document the review.
@@ -89,3 +89,4 @@
 - [x] Rebuild dashboard, finance, and household workflows around clear primary tasks, ledger-style lists, grouped actions, and mobile-native spacing.
 - [ ] Complete the banking-standard mobile redesign autonomously in independently tested chunks without requiring additional user input.
 - [ ] Re-verify the authenticated mobile secure-shell end-to-end with an active household session when a live family-side session is available, and record the exact route and state reviewed.
+- [ ] Run and document interaction-level keyboard QA for dashboard and module flows, including tab order, reachable primary actions, and visible focus on desktop and mobile.

@@ -58,6 +58,8 @@ The final local quality gate completed with zero-warning standalone linting, suc
 
 The theme bootstrap was subsequently verified at **390 × 844** with `?theme=dark` on the public landing page, dashboard, finance privacy fallback, and Account security route. It applied the requested dark palette on first paint while retaining readable text, visible form boundaries, the persistent mobile navigation, and the Account-only display preference control. A real active-household module with live data is intentionally tracked separately because it requires a family-side authenticated session.
 
+The local accessibility and responsiveness review covered visible `:focus-visible` treatment for links, buttons, inputs, selects, textareas, and custom tabindex targets in both color systems; these selectors are protected by automated stylesheet tests. All primary compact actions use at least 44 px controls, and mobile/desktop screenshots covered the revised shell, dashboard, Account controls, and every privacy-preserving module fallback. Live keyboard traversal with actual household data remains an external session verification item rather than an unsubstantiated claim.
+
 ## Tooling note
 
 The project now runs the `next/core-web-vitals` and `next/typescript` rule sets through ESLint’s FlatCompat bridge. `pnpm lint` completes with zero warnings, and the effective lint configuration contains the `@next/next` rules. Next.js 15.5 still emits a plugin-detection warning during its own build-time heuristic; this is a recognition limitation of that heuristic rather than a missing active rule set. The production build itself completes successfully and the warning should be rechecked on the next framework upgrade.
