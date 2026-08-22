@@ -79,3 +79,4 @@
 - [ ] Verify redesigned authenticated module workspaces with a real active household and data on mobile, including keyboard focus, contrast, and touch ergonomics.
 - [ ] Capture and document real active-household module screenshots in light and dark themes after the redesign, then rerun all deployment-quality gates.
 - [x] Configure framework-aware `next/core-web-vitals` and `next/typescript` lint rules, validate zero-warning standalone linting, and document the remaining Next.js 15.5 build-time plugin-detection heuristic warning for recheck after a framework upgrade.
+- [x] Remove tracked `.next-dev` build artifacts and ignore future development output so checkpoints remain small and reliable.

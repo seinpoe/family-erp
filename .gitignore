@@ -1,6 +1,7 @@
 # Dependencies and Next.js build output
 node_modules/
 .next/
+.next-dev/
 out/
 coverage/
 
