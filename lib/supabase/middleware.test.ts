@@ -15,6 +15,7 @@ describe("configured dashboard route protection", () => {
     expect(requiresAuthentication("/dashboard/finance")).toBe(true);
     expect(requiresAuthentication("/finance")).toBe(true);
     expect(requiresAuthentication("/documents")).toBe(true);
+    expect(requiresAuthentication("/account/security")).toBe(true);
     expect(requiresAuthentication("/")).toBe(false);
     expect(loginRedirectPath("/dashboard/finance")).toBe("/login?next=%2Fdashboard%2Ffinance");
   });

@@ -7,10 +7,11 @@ import { Input } from "@/components/ui/input";
 
 const initialState: LoginState = { status: "idle", message: "" };
 
-export function MagicLinkForm() {
+export function MagicLinkForm({ nextPath = "/dashboard" }: Readonly<{ nextPath?: string }>) {
   const [state, formAction, pending] = useActionState(requestMagicLink, initialState);
   return (
     <form action={formAction} className="space-y-4" noValidate>
+      <input name="next" type="hidden" value={nextPath} />
       <label className="block space-y-2" htmlFor="email">
         <span className="font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-muted">Email address</span>
         <Input id="email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required />

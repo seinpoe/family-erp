@@ -20,3 +20,9 @@ The system administrator may create, verify, disable, or otherwise manage **Supa
 > An Auth identity is not a Family ERP member until it has accepted an invitation and has an active `household_members` row. The system administrator must retain zero active household memberships and a `NULL` `active_household_id`.
 
 For the Htoo Family setup, `htooauntwan@tuta.io` remains the platform system administrator, `primary.drive.htoo@gmail.com` is the household owner, and `poeeiphyu.official@gmail.com` receives family access only through the pending adult invitation acceptance flow.
+
+## Password Responsibilities
+
+The system administrator may set an initial password while creating or recovering a Supabase Auth account through the authorized Supabase administration process. The administrator must provide that password to the intended account holder using an appropriate private channel and should require the person to replace it after their first sign-in.
+
+Signed-in users can change their own password at `/account/security`. The action requires the current password, a different replacement password of at least 12 characters, and confirmation. This process changes only the user’s Supabase Auth credential; it does not add a household membership, alter a household role, or grant the system administrator household visibility.

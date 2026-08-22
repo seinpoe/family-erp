@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canManageMembers, canWriteOperationalRecords } from "@/lib/authz/roles";
+import { canManageMembers, canWriteOperationalRecords, isHouseholdRole } from "@/lib/authz/roles";
 
 describe("household role capabilities", () => {
   it("reserves membership administration for owners", () => {
@@ -12,5 +12,10 @@ describe("household role capabilities", () => {
     expect(canWriteOperationalRecords("owner")).toBe(true);
     expect(canWriteOperationalRecords("adult")).toBe(true);
     expect(canWriteOperationalRecords("limited")).toBe(false);
+  });
+
+  it("does not treat a platform system administrator as a household role", () => {
+    expect(isHouseholdRole("system_administrator")).toBe(false);
+    expect(isHouseholdRole("owner")).toBe(true);
   });
 });

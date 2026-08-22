@@ -35,7 +35,8 @@ The repository is ready for Vercel’s standard Next.js deployment flow. Import 
 1. Add `NEXT_PUBLIC_SUPABASE_URL` from the connected Supabase project.
 2. Add `NEXT_PUBLIC_SUPABASE_ANON_KEY` from the connected Supabase project.
 3. Deploy the `main` branch, then open `/api/health` to confirm public configuration is available.
-4. In Supabase Auth, allow the deployed Vercel URL and the `/auth/callback` redirect path for passwordless sign-in.
+4. In Supabase Auth, allow the deployed Vercel URL and the `/auth/callback` redirect path for email-link sign-in.
+5. Enable Supabase Auth email/password sign-in if administrator-provisioned passwords will be used.
 
 > The application does not require or consume `SUPABASE_SERVICE_ROLE_KEY`. Keep that key out of the Vercel runtime for this RLS-only architecture.
 
@@ -65,6 +66,19 @@ The `/api/health` route exposes process health and whether public Supabase varia
 ## RLS-only security model
 
 Every application Supabase client—browser, server, middleware, and server actions—uses the same project URL and anonymous key. Authorization is enforced by the PostgreSQL Row Level Security policies in the checked-in migrations; the application does not instantiate a privileged service-role client or bypass RLS.
+
+## Administrator-provisioned accounts and passwords
+
+The **system administrator** provisions, verifies, and disables Supabase Auth identities through the authorized Supabase administration process. That administrative capability is intentionally separate from Family ERP household access: the administrator receives no household membership, no active household, and no permission to read or write family records.
+
+| Responsibility | Who performs it | Boundary |
+|---|---|---|
+| Create or set an initial Auth password | System administrator, in Supabase administration | Creates only an identity; it does not grant household access. |
+| Assign household access | Household owner through an invitation, or the approved Supabase administration acceptance workflow | Grants only the approved `owner`, `adult`, or `limited` household role. |
+| Sign in | Authenticated family account | Use password sign-in at `/login`, or request an email sign-in link. |
+| Change a password | Signed-in family account | Use `/account/security`, enter the current password, and choose a new password of at least 12 characters. |
+
+The application never stores, displays, logs, or returns a password. A password change updates only the account’s Supabase Auth credential; it does not alter household membership, role, or RLS permissions.
 
 ## Reminder delivery
 

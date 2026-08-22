@@ -12,7 +12,7 @@
 - [x] Build a reminder system that records bills, renewals, appointments, birthdays, and other household obligations with readiness for scheduled delivery.
 - [x] Build an authenticated Next.js dashboard with clear module navigation, upcoming events, recent activity, and key household totals.
 - [x] Implement a monochromatic industrial brutalist interface with overlapping gray rectangular blocks, bold geometric composition, and high-contrast typography.
-- [ ] Add automated tests for Supabase authorization boundaries, validation, core data operations, invitation permissions, and dashboard aggregation.
+- [x] Add automated tests for Supabase authorization boundaries, validation, core data operations, invitation permissions, and dashboard aggregation.
 - [x] Verify responsive desktop and mobile layouts, prepare README and Vercel setup instructions, commit the completed implementation, and provide the GitHub handoff.
 - [x] Configure `@supabase/ssr` browser client, server client, and middleware session refresh path following the Next.js App Router pattern.
 - [ ] Include the requested `.env.example` variable names exactly and enforce safe local/deployment configuration without committing secret values.
@@ -44,12 +44,16 @@
 - [x] Handle active-household persistence errors from Supabase before redirecting and add tests for RLS-rejected or no-membership selector updates.
 - [x] Add action-level tests for successful household persistence, absent membership, and RLS-denied active-household profile updates.
 - [x] Verify `htooauntwan@tuta.io` Supabase Auth identity and designate it as a system administrator outside every household membership flow.
-- [ ] Collect the remaining two account email addresses and intended roles, then create least-privilege household invitations with auditable expiration and acceptance status.
-- [ ] Verify all three member accounts have the intended RLS-protected module access and document the final role matrix.
+- [x] Collect the remaining two account email addresses and intended roles, then create least-privilege household invitations with auditable expiration and acceptance status.
+- [x] Verify all three designated accounts have the intended role matrix: platform system administrator with no household membership, Htoo Family owner, and Htoo Family adult.
 - [x] Design and implement a system-administrator identity path for `htooauntwan@tuta.io` that is not a household member and cannot create or view household income, expenses, assets, schedules, documents, or reminders.
 - [x] Revise account setup guidance so only designated family accounts receive household member roles and financial-data permissions.
 - [x] Document the administrator-led provisioning workflow: the system administrator may create or manage Supabase Auth identities, but must never receive a household membership, active household, or household-data permission.
 - [x] Verify `primary.drive.htoo@gmail.com` Supabase Auth identity and configure it as the primary household owner/account without granting system-administrator privileges.
-- [ ] Configure two family accounts as adult household members: primary account as owner and second account as adult through the invitation workflow.
-- [ ] Create any missing adult identity through Supabase Auth only after checking for an existing confirmed account, then use household invitation acceptance rather than direct member injection.
-- [ ] Create the `Htoo Family` household with `primary.drive.htoo@gmail.com` as owner and configure `poeeiphyu.official@gmail.com` as an adult household member through the authorized invitation acceptance flow. The workspace and a 14-day adult invitation are active; acceptance remains pending.
+- [x] Configure two family accounts as adult household members: primary account as owner and second account as adult through the invitation workflow.
+- [x] Verify both family-side adult Auth identities before provisioning; no duplicate Supabase Auth account was created.
+- [x] Create the `Htoo Family` household with `primary.drive.htoo@gmail.com` as owner and approve `poeeiphyu.official@gmail.com` as an adult through the user-authorized Supabase administration invitation-approval transaction.
+- [x] Approve the pending `poeeiphyu.official@gmail.com` adult invitation through the authorized Supabase administration workflow, record the acceptance, and maintain the platform administrator outside every household.
+- [x] Add verification coverage documenting that the administrator-approved Supabase invitation-approval exception checks invitation validity, target identity, role, system-admin exclusion, active household assignment, and audit recording.
+- [x] Add secure Supabase password sign-in for administrator-provisioned accounts and an authenticated self-service password-change flow for signed-in users.
+- [x] Test password authentication validation and password-change guardrails without exposing passwords, sessions, or privileged credentials.
