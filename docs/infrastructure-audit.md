@@ -66,6 +66,8 @@ The active `family-erp` project is healthy in `ap-southeast-1`. The latest secur
 
 A read-only aggregate of the last 24 hours of Supabase unified logs showed expected database, authentication, edge, connection-pool, realtime, and storage sources. It did not expose a specific server-side fault that explains the reported browser loading state. This is not sufficient to diagnose a Vercel rendering issue because the production URL and an authenticated family-side browser session were unavailable; the local bounded-recovery implementation remains the safe mitigation until deployed request traces can be correlated.
 
+The live migration inventory confirms the reviewed foundation, security hardening, auto-RLS RPC revocation, active-household RLS, invoker workspace RPC, system-administrator isolation, operational performance, and consolidated-household-policy migrations are applied. This confirms the production database schema includes the intended RLS-only authorization foundation; it does not replace the still-pending live client-session authorization exercise.
+
 [1]: https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection
 [2]: https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index
 
