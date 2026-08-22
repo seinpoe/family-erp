@@ -1,7 +1,7 @@
 # Project TODO
 
 - [x] Replace the initial scaffold with a Next.js App Router project that builds locally and is compatible with Vercel GitHub deployments.
-- [ ] Configure documented environment-variable validation for `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and server-only Supabase credentials where required.
+- [x] Configure documented environment-variable validation for `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and server-only Supabase credentials where required.
 - [x] Establish a Supabase migration workflow for PostgreSQL schema, Supabase Auth, private Storage buckets, and deployment-safe configuration.
 - [x] Create the family workspace model with households, member profiles, invitations, owner/adult/limited-access roles, and permission-aware membership rules.
 - [ ] Implement database-level RLS policies, audit events, soft-delete/retention columns, Zod validation, and UTC timestamp standards across the family ERP schema.
@@ -19,6 +19,11 @@
 - [x] Add installable PWA metadata, manifest, mobile viewport configuration, and offline-safe application shell conventions for the Family ERP workspace.
 - [x] Apply tactile, touch-friendly component standards with mobile-first layout, minimum target sizing, card-based information hierarchy, and responsive navigation.
 - [ ] Re-authenticate the GitHub connector, assign the intended GitHub repository as `origin`, and push the reviewed foundation commit to `main`.
-- [ ] Implement live Supabase dashboard loaders for household selection, upcoming events, recent activity, document totals, and financial totals rather than placeholder values.
-- [ ] Add a server-only configuration guard for `SUPABASE_SERVICE_ROLE_KEY` and document the exact Vercel environment-variable setup path without exposing secret values.
+- [x] Implement live Supabase dashboard loaders for household selection, upcoming events, recent activity, document totals, and financial totals rather than placeholder values.
+- [ ] Remove all runtime usage, validation, and tests for `SUPABASE_SERVICE_ROLE_KEY`; retain it only as an optional commented setup placeholder if an environment template is supported.
+- [x] Add a household selector and persisted active-household state for people who belong to more than one household.
+- [ ] Enforce `/dashboard` authentication consistently after Supabase configuration and cover signed-out redirect behavior in automated tests.
+- [x] Verify every browser, server, middleware, and server-action Supabase client uses only the URL and anonymous key so RLS remains the sole authorization boundary.
 - [ ] Verify signed-out redirects plus loading, empty, and configured states for the authenticated dashboard once Vercel environment variables are supplied.
+- [x] Handle active-household persistence errors from Supabase before redirecting and add tests for RLS-rejected or no-membership selector updates.
+- [x] Add action-level tests for successful household persistence, absent membership, and RLS-denied active-household profile updates.

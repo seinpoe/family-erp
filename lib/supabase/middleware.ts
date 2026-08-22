@@ -5,6 +5,14 @@ import type { Database } from "@/lib/supabase/types";
 
 const protectedPaths = ["/dashboard"];
 
+export function requiresAuthentication(pathname: string) {
+  return protectedPaths.some((path) => pathname.startsWith(path));
+}
+
+export function loginRedirectPath(pathname: string) {
+  return `/login?next=${encodeURIComponent(pathname)}`;
+}
+
 export async function updateSession(request: NextRequest) {
   const config = getSupabasePublicConfig();
   let response = NextResponse.next({ request });
@@ -22,7 +30,7 @@ export async function updateSession(request: NextRequest) {
   });
 
   const { data: { user } } = await supabase.auth.getUser();
-  const isProtectedPath = protectedPaths.some((path) => request.nextUrl.pathname.startsWith(path));
+  const isProtectedPath = requiresAuthentication(request.nextUrl.pathname);
 
   if (isProtectedPath && !user) {
     const url = request.nextUrl.clone();

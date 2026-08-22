@@ -14,13 +14,12 @@ Hearthline is a **mobile-first Family Lifetime ERP** foundation built with Next.
 
 ## Local setup
 
-Create local environment variables with the following names, then install and run the project. Do not commit real values. The same names must be entered in **Vercel → Project Settings → Environment Variables**.
+Configure only the following two runtime variables locally and in **Vercel → Project Settings → Environment Variables**. Do not commit real values.
 
 | Variable | Scope | Purpose |
 |---|---|---|
 | `NEXT_PUBLIC_SUPABASE_URL` | Browser and server | Supabase project API URL. |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Browser and server | Publishable/anonymous key used with Row Level Security. |
-| `SUPABASE_SERVICE_ROLE_KEY` | Server only | Reserved for future trusted administration; never expose to a client bundle. |
 
 ```bash
 pnpm install
@@ -45,6 +44,10 @@ pnpm build
 ```
 
 The `/api/health` route exposes process health and whether public Supabase variables are available, without exposing a secret value.
+
+## RLS-only security model
+
+Every application Supabase client—browser, server, middleware, and server actions—uses the same project URL and anonymous key. Authorization is enforced by the PostgreSQL Row Level Security policies in the checked-in migrations; the application does not instantiate a privileged service-role client or bypass RLS.
 
 ## Reminder delivery
 
