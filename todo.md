@@ -61,8 +61,21 @@
 - [ ] Enable Supabase Auth current-password enforcement for password changes and align it with the application’s current-password confirmation flow before production password use.
 - [x] Identify the root cause of the Next.js root-page preview runtime error (`a[d] is not a function`), apply a durable fix if required, and perform repeated post-restart homepage regression verification. Development and production Next.js artifacts are now isolated; the dedicated configuration test and repeated post-build homepage requests pass.
 - [x] Apply the requested blue, white, Athens Gray, and dark neutral theme tokens across the mobile-first Family ERP interface.
-- [ ] Verify light and dark theme contrast, desktop and mobile rendering, and quality checks after the palette update.
+- [x] Verify light and dark theme contrast, desktop and mobile rendering, and quality checks after the palette update.
 - [ ] Add a user-controlled light/dark theme preference and directly review dark-mode rendering on public, authenticated, and module workspace routes.
 - [x] Fix the blank protected-module fallback shown when a session exists without an active configured household, then re-verify its module fallback surface in dark mode.
 - [x] Capture dark-mode mobile screenshots for public, authenticated, and security routes using the explicit theme preference.
 - [ ] Verify a real active-household module workspace in dark mode after Vercel public Supabase configuration and a family-side authenticated session are available.
+- [ ] Verify the user-confirmed Supabase Auth current-password enforcement and deployment-side public Supabase configuration before exercising live password and RLS flows.
+- [ ] Run live anon-key tests using the two Htoo Family identities to confirm owner/adult data access, system-admin household denial, and cross-household isolation.
+- [x] Produce an actionable infrastructure standards audit covering RLS authorization, authentication, secure configuration, data protection, error handling, observability, PWA resilience, and deployment readiness.
+- [x] Implement the highest-priority, non-secret infrastructure hardening improvements identified by the standards audit and add regression coverage.
+- [ ] Redesign the mobile experience around banking-grade information hierarchy, touch targets, clear balances and activity states, predictable navigation, and accessible financial interactions.
+- [ ] Validate the redesigned interface for keyboard accessibility, focus visibility, touch ergonomics, contrast, responsive layouts, and production build readiness.
+- [x] Add and verify a high-visibility keyboard focus indicator for links, buttons, inputs, and selects across light and dark themes.
+- [ ] Verify dark-mode rendering for a real authenticated active-household module workspace with actual data using the in-app theme preference, then document the review.
+- [ ] Redesign finance and shared module workspace flows with banking-style mobile summaries, prioritized actions, touch-first forms and lists, and accessible interaction states.
+- [ ] Extend banking-style mobile summaries, prioritized actions, and touch-first interaction patterns to the remaining non-finance module workspaces.
+- [ ] Verify redesigned authenticated module workspaces with a real active household and data on mobile, including keyboard focus, contrast, and touch ergonomics.
+- [ ] Capture and document real active-household module screenshots in light and dark themes after the redesign, then rerun all deployment-quality gates.
+- [x] Configure framework-aware `next/core-web-vitals` and `next/typescript` lint rules, validate zero-warning standalone linting, and document the remaining Next.js 15.5 build-time plugin-detection heuristic warning for recheck after a framework upgrade.

@@ -2,6 +2,7 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 type Theme = "light" | "dark";
 
@@ -12,7 +13,7 @@ function applyTheme(theme: Theme) {
   localStorage.setItem(storageKey, theme);
 }
 
-export function ThemeToggle() {
+export function ThemeToggle({ className }: { className?: string }) {
   const [theme, setTheme] = useState<Theme | null>(null);
 
   useEffect(() => {
@@ -29,7 +30,7 @@ export function ThemeToggle() {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 flex overflow-hidden border border-line bg-surface shadow-tactile-sm" role="group" aria-label="Color theme">
+    <div className={cn("flex overflow-hidden border border-line bg-surface shadow-tactile-sm", className)} role="group" aria-label="Color theme">
       <button type="button" aria-label="Use light theme" aria-pressed={theme === "light"} onClick={() => chooseTheme("light")} className={theme === "light" ? "grid size-11 place-items-center bg-brand text-white" : "grid size-11 place-items-center text-ink transition hover:bg-soft hover:text-brand"}><Sun className="size-4" aria-hidden="true" /></button>
       <button type="button" aria-label="Use dark theme" aria-pressed={theme === "dark"} onClick={() => chooseTheme("dark")} className={theme === "dark" ? "grid size-11 place-items-center bg-contrast text-white" : "grid size-11 place-items-center border-l border-line text-ink transition hover:bg-soft hover:text-brand"}><Moon className="size-4" aria-hidden="true" /></button>
     </div>

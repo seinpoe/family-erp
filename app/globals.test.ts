@@ -16,4 +16,10 @@ describe("Family ERP color system", () => {
     expect(stylesheet).toContain("--app-canvas: #18191a");
     expect(stylesheet).toContain("--app-surface: #242526");
   });
+
+  it("keeps a visible keyboard focus treatment across interactive controls", () => {
+    expect(stylesheet).toContain("button:focus-visible");
+    expect(stylesheet).toContain("outline: 3px solid var(--app-brand)");
+    expect(stylesheet).toContain("select:focus-visible");
+  });
 });
