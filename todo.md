@@ -57,3 +57,4 @@
 - [x] Add verification coverage documenting that the administrator-approved Supabase invitation-approval exception checks invitation validity, target identity, role, system-admin exclusion, active household assignment, and audit recording.
 - [x] Add secure Supabase password sign-in for administrator-provisioned accounts and an authenticated self-service password-change flow for signed-in users.
 - [x] Test password authentication validation and password-change guardrails without exposing passwords, sessions, or privileged credentials.
+- [ ] Enable Supabase Auth leaked-password protection in project authentication settings before enabling production password sign-in; the security advisor currently reports this external setting as disabled.

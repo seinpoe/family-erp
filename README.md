@@ -80,6 +80,8 @@ The **system administrator** provisions, verifies, and disables Supabase Auth id
 
 The application never stores, displays, logs, or returns a password. A password change updates only the account’s Supabase Auth credential; it does not alter household membership, role, or RLS permissions.
 
+> **Production prerequisite:** Before enabling password sign-in for family accounts, enable Supabase Auth’s [leaked-password protection](https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection) in the project authentication settings. The latest security review reported this setting as disabled; it is an external Supabase project configuration rather than an application-runtime setting.
+
 ## Reminder delivery
 
 The schema records bills, renewals, appointments, birthdays, and custom household obligations. The next slice should add a protected scheduled delivery handler or Supabase Edge Function after the household's delivery channel and timing policy are selected.
