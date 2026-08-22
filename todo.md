@@ -89,4 +89,4 @@
 - [x] Rebuild dashboard, finance, and household workflows around clear primary tasks, ledger-style lists, grouped actions, and mobile-native spacing.
 - [ ] Complete the banking-standard mobile redesign autonomously in independently tested chunks without requiring additional user input.
 - [ ] Re-verify the authenticated mobile secure-shell end-to-end with an active household session when a live family-side session is available, and record the exact route and state reviewed.
-- [ ] Run and document interaction-level keyboard QA for dashboard and module flows, including tab order, reachable primary actions, and visible focus on desktop and mobile.
+- [x] Run and document interaction-level keyboard QA for dashboard and module flows, including tab order, reachable primary actions, and visible focus on desktop and mobile.
