@@ -44,6 +44,10 @@ The secure-shell chunk was verified locally at **390 × 844** on `/dashboard` an
 | 4. Private document workflows | Mobile document capture/search, metadata linking, private storage status, and recovery messages. | Upload/authorization tests and visual checks. | Pending. |
 | 5. Live validation and deployment handoff | Family-side active-household verification, RLS role isolation, current-password setting confirmation, deployed headers, PWA behavior, and response timing. | External authenticated-session and deployment evidence. | Pending external access. |
 
+## Deployment configuration template
+
+The deployment contract requires `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Vercel’s environment settings. The managed project environment does not permit committing an `.env.example` file through this workflow, so the repository keeps these names documented rather than storing values or a generated local environment file. `SUPABASE_SERVICE_ROLE_KEY` remains intentionally absent from runtime configuration: this application must not add that key or bypass RLS in browser, server, middleware, action, or route code.
+
 ## Redesign validation — local evidence
 
 The dashboard now uses a compact **Today** overview, two-column mobile metrics, a dedicated attention center, a three-action task launcher, and a two-column workspace grid. The finance workspace adds an honest, currency-safe **net recorded position** that is explicitly distinguished from a bank balance or forecast. It separates incoming, outgoing, and liability records, preserves transfer neutrality, exposes clear ledger and transaction-entry anchors, and places transaction history before entry on narrow screens.
