@@ -1,0 +1,24 @@
+# Project TODO
+
+- [x] Replace the initial scaffold with a Next.js App Router project that builds locally and is compatible with Vercel GitHub deployments.
+- [ ] Configure documented environment-variable validation for `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and server-only Supabase credentials where required.
+- [x] Establish a Supabase migration workflow for PostgreSQL schema, Supabase Auth, private Storage buckets, and deployment-safe configuration.
+- [x] Create the family workspace model with households, member profiles, invitations, owner/adult/limited-access roles, and permission-aware membership rules.
+- [ ] Implement database-level RLS policies, audit events, soft-delete/retention columns, Zod validation, and UTC timestamp standards across the family ERP schema.
+- [x] Create extensible modules for family profiles, financial records, assets, schedules, documents, reminders, and cross-module activity history.
+- [ ] Implement secure server actions and route handlers for household setup, membership invitations, role management, module operations, and data aggregation.
+- [ ] Build a searchable document vault using private Supabase Storage and metadata linked to the relevant family ERP record.
+- [ ] Build a reminder system that records bills, renewals, appointments, birthdays, and other household obligations with readiness for scheduled delivery.
+- [ ] Build an authenticated Next.js dashboard with clear module navigation, upcoming events, recent activity, and key household totals.
+- [x] Implement a monochromatic industrial brutalist interface with overlapping gray rectangular blocks, bold geometric composition, and high-contrast typography.
+- [ ] Add automated tests for Supabase authorization boundaries, validation, core data operations, invitation permissions, and dashboard aggregation.
+- [ ] Verify responsive desktop and mobile layouts, prepare README and Vercel setup instructions, commit the completed implementation, and provide the GitHub handoff.
+- [x] Configure `@supabase/ssr` browser client, server client, and middleware session refresh path following the Next.js App Router pattern.
+- [ ] Include the requested `.env.example` variable names exactly and enforce safe local/deployment configuration without committing secret values.
+- [ ] Run `lint`, `typecheck`, `test`, and `build` scripts successfully before committing and pushing all foundation code to the connected GitHub repository `main` branch.
+- [x] Add installable PWA metadata, manifest, mobile viewport configuration, and offline-safe application shell conventions for the Family ERP workspace.
+- [x] Apply tactile, touch-friendly component standards with mobile-first layout, minimum target sizing, card-based information hierarchy, and responsive navigation.
+- [ ] Re-authenticate the GitHub connector, assign the intended GitHub repository as `origin`, and push the reviewed foundation commit to `main`.
+- [ ] Implement live Supabase dashboard loaders for household selection, upcoming events, recent activity, document totals, and financial totals rather than placeholder values.
+- [ ] Add a server-only configuration guard for `SUPABASE_SERVICE_ROLE_KEY` and document the exact Vercel environment-variable setup path without exposing secret values.
+- [ ] Verify signed-out redirects plus loading, empty, and configured states for the authenticated dashboard once Vercel environment variables are supplied.

@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-canvas: oklch(0.975 0 0);
+  --color-surface: oklch(0.94 0 0);
+  --color-soft: oklch(0.885 0 0);
+  --color-line: oklch(0.69 0 0);
+  --color-muted: oklch(0.42 0 0);
+  --color-ink: oklch(0.18 0 0);
+  --color-error: oklch(0.48 0.17 25);
+  --shadow-tactile: 5px 5px 0 oklch(0.18 0 0);
+  --shadow-tactile-sm: 3px 3px 0 oklch(0.18 0 0);
+}
+
+:root { color-scheme: light; }
+* { border-color: oklch(0.69 0 0); }
+html { background: oklch(0.975 0 0); text-rendering: optimizeLegibility; }
+body { min-height: 100vh; background: linear-gradient(to right, oklch(0.18 0 0 / 0.045) 1px, transparent 1px), linear-gradient(to bottom, oklch(0.18 0 0 / 0.045) 1px, transparent 1px), oklch(0.975 0 0); background-size: 24px 24px; color: oklch(0.18 0 0); font-family: Arial, Helvetica, sans-serif; }
+button, a, input { -webkit-tap-highlight-color: transparent; }
+::selection { background: oklch(0.18 0 0); color: oklch(0.975 0 0); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
