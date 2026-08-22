@@ -60,6 +60,13 @@ The theme bootstrap was subsequently verified at **390 × 844** with `?theme=dar
 
 The local accessibility and responsiveness review covered visible `:focus-visible` treatment for links, buttons, inputs, selects, textareas, and custom tabindex targets in both color systems; these selectors are protected by automated stylesheet tests. All primary compact actions use at least 44 px controls, and mobile/desktop screenshots covered the revised shell, dashboard, Account controls, and every privacy-preserving module fallback. Live keyboard traversal with actual household data remains an external session verification item rather than an unsubstantiated claim.
 
+## Supabase advisor recheck — 23 August 2026
+
+The active `family-erp` project is healthy in `ap-southeast-1`. The latest security advisor still reports one warning: leaked-password protection is disabled. This matches the documented current-plan limitation and is not remediated by weakening the RLS-only architecture. The latest performance advisor reports only **INFO-level unused-index notices** across household-scoped tables. Because the household has low current traffic and these indexes support established, privacy-scoped query paths, no destructive index removal was performed. The project should reassess actual index use after meaningful production activity rather than optimizing away safeguards based on an empty or low-use workload. [1] [2]
+
+[1]: https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection
+[2]: https://supabase.com/docs/guides/database/database-linter?lint=0005_unused_index
+
 ## Tooling note
 
 The project now runs the `next/core-web-vitals` and `next/typescript` rule sets through ESLint’s FlatCompat bridge. `pnpm lint` completes with zero warnings, and the effective lint configuration contains the `@next/next` rules. Next.js 15.5 still emits a plugin-detection warning during its own build-time heuristic; this is a recognition limitation of that heuristic rather than a missing active rule set. The production build itself completes successfully and the warning should be rechecked on the next framework upgrade.
