@@ -16,10 +16,10 @@
 - [ ] Verify responsive desktop and mobile layouts, prepare README and Vercel setup instructions, commit the completed implementation, and provide the GitHub handoff.
 - [x] Configure `@supabase/ssr` browser client, server client, and middleware session refresh path following the Next.js App Router pattern.
 - [ ] Include the requested `.env.example` variable names exactly and enforce safe local/deployment configuration without committing secret values.
-- [ ] Run `lint`, `typecheck`, `test`, and `build` scripts successfully before committing and pushing all foundation code to the connected GitHub repository `main` branch.
+- [x] Run `lint`, `typecheck`, `test`, and `build` scripts successfully before committing and pushing all foundation code to the connected GitHub repository `main` branch.
 - [x] Add installable PWA metadata, manifest, mobile viewport configuration, and offline-safe application shell conventions for the Family ERP workspace.
 - [x] Apply tactile, touch-friendly component standards with mobile-first layout, minimum target sizing, card-based information hierarchy, and responsive navigation.
-- [ ] Re-authenticate the GitHub connector, assign the intended GitHub repository as `origin`, and push the reviewed foundation commit to `main`.
+- [x] Re-authenticate the GitHub connector, assign the intended GitHub repository as `origin`, and push the reviewed foundation commit to `main`.
 - [x] Implement live Supabase dashboard loaders for household selection, upcoming events, recent activity, document totals, and financial totals rather than placeholder values.
 - [ ] Remove all runtime usage, validation, and tests for `SUPABASE_SERVICE_ROLE_KEY`; retain it only as an optional commented setup placeholder if an environment template is supported.
 - [x] Add a household selector and persisted active-household state for people who belong to more than one household.
@@ -32,7 +32,9 @@
 - [x] Add explicit allowed-versus-denied authorization outcome tests for protected household mutations at the Supabase action boundary.
 - [x] Add denied Supabase write assertions for family, finance, and reminder mutations, and strengthen household-boundary permission fixtures.
 - [ ] Run live anon-key Supabase RLS integration tests with two authenticated household users after Vercel environment variables are configured; verify cross-household reads and writes are denied.
-- [ ] Confirm the GitHub remote targets `seinpoe/family-erp`, push the latest reviewed commit to `main`, and verify local `HEAD` matches `origin/main`.
+- [x] Verify README documents Vercel setup, required public environment variables, and GitHub handoff details before delivering the synchronized repository status.
+- [ ] Send the explicit GitHub handoff with repository URL, `main` branch, synchronized commit SHA, and Vercel environment setup notes.
+- [x] Confirm the GitHub remote targets `seinpoe/family-erp`, push the latest reviewed commit to `main`, and verify local `HEAD` matches `origin/main`.
 - [x] Exercise configured dashboard signed-out redirect and summary-error behavior directly at the route or middleware boundary.
 - [x] Protect every dashboard-linked module route in middleware and test the actual signed-out redirect response with a preserved return path.
 - [x] Add loading-state UI for authenticated dashboard and module data routes, then re-verify empty, error, and configured views.
