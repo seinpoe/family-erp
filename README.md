@@ -21,6 +21,8 @@ Configure only the following two runtime variables locally and in **Vercel → P
 | `NEXT_PUBLIC_SUPABASE_URL` | Browser and server | Supabase project API URL. |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Browser and server | Publishable/anonymous key used with Row Level Security. |
 
+> This managed workspace provisions environment values through deployment configuration rather than committing a local `.env.example` file. The table above is the exact template: set both values in Vercel, leave them out of Git, and do not add a service-role key to this application runtime.
+
 ```bash
 pnpm install
 pnpm dev

@@ -21,7 +21,9 @@
 - [x] Apply tactile, touch-friendly component standards with mobile-first layout, minimum target sizing, card-based information hierarchy, and responsive navigation.
 - [x] Re-authenticate the GitHub connector, assign the intended GitHub repository as `origin`, and push the reviewed foundation commit to `main`.
 - [x] Implement live Supabase dashboard loaders for household selection, upcoming events, recent activity, document totals, and financial totals rather than placeholder values.
-- [ ] Remove all runtime usage, validation, and tests for `SUPABASE_SERVICE_ROLE_KEY`; retain it only as an optional commented setup placeholder if an environment template is supported.
+- [x] Remove all runtime usage, validation, and tests for `SUPABASE_SERVICE_ROLE_KEY`; retain it only as an optional commented setup placeholder if an environment template is supported.
+- [ ] Run a repository-wide service-role reference verification and complete the optional `.env.example` placeholder only when environment template support is available.
+- [x] Document the managed environment-template limitation and retain the exact public-variable setup instructions in README until `.env.example` can be committed.
 - [x] Add a household selector and persisted active-household state for people who belong to more than one household.
 - [x] Enforce `/dashboard` authentication consistently after Supabase configuration and cover signed-out redirect behavior in automated tests.
 - [x] Verify every browser, server, middleware, and server-action Supabase client uses only the URL and anonymous key so RLS remains the sole authorization boundary.
